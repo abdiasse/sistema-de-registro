@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge#1</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    </html>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2? family=Inter&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #2b12b9;
+        color: #071ea0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    } body
+
+    header {
+        text-align:left;
+        padding: 20px 0;
+        background-color:#0a07bd;
+        color: rgb(15, 17, 150);
+    }
+
+    header .logo.png {
+        max-width: 150px;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    section {
+        background-color: #ffeeee;
+        border: 2px solid #190ebe;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        width: 40%;
+    }
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 2px;
+        border: 2px solid #0d0b91;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        font-size: 1,5em;
+        background-color: #0000;
+    
+    }
+
+    .restriccion {
+        color: #1430ad;
+        font-size: 0.9em;
+        text-align: auto;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .botones button {
+        background-color: #0a61d3;
+        color: rgba(0, 0, 0, 0.767);
+        border: none;
+        border-radius: 10px;
+        padding: 12px 25px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .botones button:hover {
+        background-color: #0527bd;
+    }
+
+    .dinamico {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .dinamico h2, .dinamico h3 {
+        margin: 15px 5;
+    }
+
+    .dinamico .copiar {
+        display: inline-block;
+        background-color: #097fa3;
+        color: white;
+        border: 5px;
+        border-radius: 10px;
+        padding: 15px 25px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-top: 15px;
+        transition: background-color 0.5s ease;
+    }
+
+    .dinamico .copiar:hover {
+        background-color: #0c0c0c;
+    }
+
+    .dinamico .anuncio {
+        display: block;
+        margin-bottom: 10px;
+        color: #b3a6a6;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #070aaa;
+        color: rgb(23, 6, 122);
+    }
+</style>
+</head>
+<body>
+<header>
+    <img src="logo.png">
+</header>
+
+<main>
+    <section>
+        <textarea class="entrada-texto" cols="35" rows="15" placeholder="Ingrese el texto aquí" autofocus></textarea>
+        <div>
+            <h6 class="restriccion">&#9888 Letras Minúsculas y Numeros.</h6>
+        </div>
+        <div class="botones">
+            <button name="encriptar" class="encriptar" onclick="encriptar()">Encriptar </button>
+            <button name="desencriptar" class="desencriptar" onclick="desencriptar()">Desencriptar </button>
+        </div>
+    </section>
+    <section>
+        <textarea class="salida-texto" cols="35" rows="15" disabled></textarea>
+        <div class="dinamico">
+            <h2 class="texto1">Ningún mensaje fue encontrado</h2>
+            <h3 class="texto2">Ingresa el texto que desees encriptar o desencriptar.</h3>
+            <button name="copiar" class="copiar" onclick="copiar()" style="display: none;"><span class="anuncio"></span>Copiar</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p class="copyright">&copy;Por Abdiasse Limage_Diassytec</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
